@@ -1,0 +1,374 @@
+/* General reset and setup */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    background-color: #111;
+    color: #f0f0f0;
+    line-height: 1.6;
+    width: 100%;
+}
+
+/* Navigation Styles */
+nav {
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    background-color: #111;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
+    width: 100%;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px red;
+}
+
+.hamburg,
+.cancel {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+    font-size: 2.5rem;
+}
+
+.nav-container .links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-container .links a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-container .links a::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: red;
+    transition: width 0.3s ease;
+}
+
+.nav-container .links a:hover {
+    color: red;
+}
+
+.nav-container .links a:hover::before {
+    width: 100%;
+}
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #111;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image {
+    flex: 1;
+    max-width: 350px;
+}
+
+.image img {
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px red;
+}
+
+.content {
+    flex: 2;
+    max-width: 600px;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.typewriter {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.social-links a {
+    margin-right: 15px;
+    font-size: 2rem;
+    color: #fff;
+    transition: color 0.3s ease;
+    text-decoration: none;
+    text-shadow: 0 0 10px red;
+}
+
+.social-links a:hover {
+    color: red;
+}
+
+.btn button {
+    padding: 12px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px red;
+}
+
+.btn button:hover {
+    background-color: darkred;
+}
+
+/* About Section */
+#about {
+    background-color: #111;
+    padding: 80px 20px;
+    color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 50%;
+    padding-left: 40px;
+    position: relative;
+}
+
+.about-text h2 {
+    font-size: 3rem;
+    color: red;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px red;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f4f4f4;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.about-text p strong {
+    color: red;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 45%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effects */
+.about-container:hover .about-image img {
+    transform: scale(1.05);
+}
+
+.about-container:hover .about-text h2 {
+    color: darkred;
+}
+
+.about-container:hover .about-text p {
+    color: #d1d1d1;
+}
+
+/* Resume Section */
+#resume {
+    background-color: #111;
+    padding: 80px 20px;
+    color: #f0f0f0;
+}
+
+.resume-container h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.resume-container h3 {
+    color: red;
+}
+
+.resume-container p,
+.resume-container ul {
+    font-size: 1.1rem;
+    color: #f4f4f4;
+}
+
+.resume-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resume-container ul li {
+    margin: 10px 0;
+}
+
+/* Bio Data Section */
+#bio {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.bio-container h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+.bio-item p {
+    font-size: 1.1rem;
+    color: #f4f4f4;
+    margin: 10px 0;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #1a1a1a;
+    padding: 60px 20px;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: red;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-item {
+    width: 100%;
+    margin: 10px 0;
+}
+
+input,
+textarea {
+    padding: 12px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid red;
+    background-color: transparent;
+    color: white;
+    transition: border 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: darkred;
+    outline: none;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 0 10px red;
+}
+
+button:hover {
+    background-color: darkred;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 884px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image {
+        margin-bottom: 20px;
+    }
+
+    .image img {
+        width: 300px;
+    }
+
+    .content {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+}
